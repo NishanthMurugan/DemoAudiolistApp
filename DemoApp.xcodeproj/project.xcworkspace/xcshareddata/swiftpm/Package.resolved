@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "audioplaylist",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NishanthMurugan/AudioPlaylist/",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a425ad8792c7f1ba4d20b52bb7c72c952221c9a0"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "3ec0ab0bca4feb56e8b33e289c9496e89059dd08",
+        "version" : "7.10.2"
+      }
+    }
+  ],
+  "version" : 2
+}

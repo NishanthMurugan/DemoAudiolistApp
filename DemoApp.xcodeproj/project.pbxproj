@@ -14,6 +14,10 @@
 		DE0EB6172B5000E1005E18E3 /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EB6162B5000E1005E18E3 /* DemoAppTests.swift */; };
 		DE0EB6212B5000E1005E18E3 /* DemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EB6202B5000E1005E18E3 /* DemoAppUITests.swift */; };
 		DE0EB6232B5000E1005E18E3 /* DemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EB6222B5000E1005E18E3 /* DemoAppUITestsLaunchTests.swift */; };
+		DEA298232B503A2D00EDF358 /* AudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA298222B503A2D00EDF358 /* AudioViewModel.swift */; };
+		DEA298252B50656200EDF358 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA298242B50656200EDF358 /* NetworkManager.swift */; };
+		DEA298272B50688C00EDF358 /* AudioListModelFromApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA298262B50688C00EDF358 /* AudioListModelFromApi.swift */; };
+		DEA2982A2B50925100EDF358 /* AudioPlaylist in Frameworks */ = {isa = PBXBuildFile; productRef = DEA298292B50925100EDF358 /* AudioPlaylist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 		DE0EB61C2B5000E1005E18E3 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0EB6202B5000E1005E18E3 /* DemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITests.swift; sourceTree = "<group>"; };
 		DE0EB6222B5000E1005E18E3 /* DemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DEA298222B503A2D00EDF358 /* AudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewModel.swift; sourceTree = "<group>"; };
+		DEA298242B50656200EDF358 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DEA298262B50688C00EDF358 /* AudioListModelFromApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioListModelFromApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA2982A2B50925100EDF358 /* AudioPlaylist in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,7 @@
 				DE0EB6152B5000E1005E18E3 /* DemoAppTests */,
 				DE0EB61F2B5000E1005E18E3 /* DemoAppUITests */,
 				DE0EB6032B5000DB005E18E3 /* Products */,
+				DE0EB64F2B50156F005E18E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +103,10 @@
 		DE0EB6042B5000DB005E18E3 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				DE0EB6052B5000DB005E18E3 /* DemoAppApp.swift */,
-				DE0EB6072B5000DB005E18E3 /* ContentView.swift */,
+				DE0EB6342B50032F005E18E3 /* View */,
+				DE0EB6322B500314005E18E3 /* Viewmodel */,
+				DE0EB6332B50031D005E18E3 /* Model */,
+				DEA298212B50193B00EDF358 /* NetworkManager */,
 				DE0EB6092B5000E1005E18E3 /* Assets.xcassets */,
 				DE0EB60B2B5000E1005E18E3 /* Preview Content */,
 			);
@@ -127,6 +138,46 @@
 			path = DemoAppUITests;
 			sourceTree = "<group>";
 		};
+		DE0EB6322B500314005E18E3 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				DEA298222B503A2D00EDF358 /* AudioViewModel.swift */,
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		DE0EB6332B50031D005E18E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEA298262B50688C00EDF358 /* AudioListModelFromApi.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE0EB6342B50032F005E18E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE0EB6072B5000DB005E18E3 /* ContentView.swift */,
+				DE0EB6052B5000DB005E18E3 /* DemoAppApp.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE0EB64F2B50156F005E18E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEA298212B50193B00EDF358 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				DEA298242B50656200EDF358 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +194,9 @@
 			dependencies = (
 			);
 			name = DemoApp;
+			packageProductDependencies = (
+				DEA298292B50925100EDF358 /* AudioPlaylist */,
+			);
 			productName = DemoApp;
 			productReference = DE0EB6022B5000DB005E18E3 /* DemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +269,9 @@
 				Base,
 			);
 			mainGroup = DE0EB5F92B5000DB005E18E3;
+			packageReferences = (
+				DEA298282B50925100EDF358 /* XCRemoteSwiftPackageReference "AudioPlaylist" */,
+			);
 			productRefGroup = DE0EB6032B5000DB005E18E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +314,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA298252B50656200EDF358 /* NetworkManager.swift in Sources */,
 				DE0EB6082B5000DB005E18E3 /* ContentView.swift in Sources */,
+				DEA298232B503A2D00EDF358 /* AudioViewModel.swift in Sources */,
+				DEA298272B50688C00EDF358 /* AudioListModelFromApi.swift in Sources */,
 				DE0EB6062B5000DB005E18E3 /* DemoAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +642,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DEA298282B50925100EDF358 /* XCRemoteSwiftPackageReference "AudioPlaylist" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NishanthMurugan/AudioPlaylist/";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DEA298292B50925100EDF358 /* AudioPlaylist */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEA298282B50925100EDF358 /* XCRemoteSwiftPackageReference "AudioPlaylist" */;
+			productName = AudioPlaylist;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE0EB5FA2B5000DB005E18E3 /* Project object */;
 }
